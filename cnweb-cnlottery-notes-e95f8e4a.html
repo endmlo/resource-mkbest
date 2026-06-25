@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>中彩网官网首页 · 每一次回访都值得被记住</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans SC', 'Helvetica Neue', sans-serif;
+            background: #f4f9fc;
+            color: #1f2f3a;
+            line-height: 1.7;
+            padding: 24px 20px 60px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 820px;
+            width: 100%;
+        }
+
+        /* 柔和开场 */
+        .opening {
+            margin: 28px 0 18px;
+            font-size: 1.75rem;
+            font-weight: 400;
+            color: #1b4e5c;
+            letter-spacing: 0.02em;
+            line-height: 1.4;
+            border-left: 5px solid #3c9a9e;
+            padding-left: 20px;
+            background: linear-gradient(to right, #e8f5f7, transparent);
+            border-radius: 0 12px 12px 0;
+        }
+
+        .opening strong {
+            font-weight: 500;
+            color: #166b73;
+        }
+
+        /* 承接段落 — 温和叙述 */
+        .story {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(2px);
+            padding: 28px 28px 24px;
+            border-radius: 28px 12px 28px 12px;
+            box-shadow: 0 6px 18px rgba(44, 120, 125, 0.07);
+            margin: 20px 0 32px;
+            border: 1px solid #d3e9ec;
+        }
+
+        .story p {
+            margin-bottom: 1.1em;
+            font-size: 1.06rem;
+            color: #20373e;
+        }
+
+        .story p:last-child {
+            margin-bottom: 0;
+        }
+
+        .story .accent-link {
+            color: #1a7e80;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted #7dc2c5;
+            transition: border 0.2s, color 0.2s;
+        }
+
+        .story .accent-link:hover {
+            color: #0f5457;
+            border-bottom: 1px solid #0f5457;
+        }
+
+        /* 网格卡片 —— 蓝绿点缀 */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px 18px;
+            margin: 36px 0 32px;
+        }
+
+        @media (max-width: 520px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .grid-card {
+            background: white;
+            border-radius: 24px 8px 24px 8px;
+            padding: 20px 18px 22px;
+            box-shadow: 0 5px 12px rgba(34, 108, 114, 0.06);
+            border: 1px solid #d7eef0;
+            transition: all 0.2s ease;
+        }
+
+        .grid-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 22px rgba(38, 118, 122, 0.08);
+            border-color: #9acfd2;
+        }
+
+        .grid-card .emoji-marker {
+            display: inline-block;
+            background: #d7f0f2;
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: #15595f;
+        }
+
+        .grid-card h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #13454d;
+            margin-bottom: 6px;
+            letter-spacing: -0.01em;
+        }
+
+        .grid-card p {
+            font-size: 0.96rem;
+            color: #2b4d55;
+            line-height: 1.6;
+        }
+
+        /* 温和收束 */
+        .gentle-closing {
+            background: white;
+            border-radius: 40px 12px 40px 12px;
+            padding: 28px 25px 32px;
+            margin: 32px 0 26px;
+            border: 1px solid #cbe3e6;
+            background: linear-gradient(145deg, #ffffff, #f2fbfc);
+        }
+
+        .gentle-closing p {
+            font-size: 1.05rem;
+            margin-bottom: 0.8em;
+        }
+
+        .gentle-closing .quiet-note {
+            display: inline-block;
+            background: #dff1f3;
+            padding: 10px 18px;
+            border-radius: 40px;
+            font-size: 0.95rem;
+            color: #1c5a61;
+            border-left: 4px solid #3b979b;
+            margin-top: 8px;
+        }
+
+        /* 双栏提示（轻faq） */
+        .tips-duo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin: 18px 0 8px;
+        }
+
+        .tip-item {
+            background: #ebf6f7;
+            border-radius: 40px 8px 40px 8px;
+            padding: 14px 18px;
+            flex: 1 1 200px;
+            border: 1px solid #cde3e6;
+            color: #173e45;
+        }
+
+        .tip-item span {
+            display: block;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #18646b;
+            margin-bottom: 2px;
+        }
+
+        .tip-item small {
+            font-size: 0.9rem;
+            opacity: 0.85;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #b1d7db, transparent);
+            margin: 36px 0 22px;
+        }
+
+        .footer-meta {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #5c8289;
+            margin-top: 10px;
+            letter-spacing: 0.3px;
+        }
+
+        a {
+            color: #1a7e80;
+        }
+
+        /* 保证可触区域友好 */
+        .inline-link {
+            color: #146b6e;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #a0d0d3;
+        }
+
+        .inline-link:hover {
+            border-bottom: 1px solid #146b6e;
+        }
+
+        /* 移动端微调 */
+        @media (max-width: 480px) {
+            .opening {
+                font-size: 1.45rem;
+                padding-left: 14px;
+            }
+            .story {
+                padding: 22px 18px 20px;
+            }
+            .grid-card {
+                padding: 18px 14px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 开场短句：再次访问的暖意 -->
+    <div class="opening">
+        <strong>再次打开，</strong> 像是推开一扇熟悉的门。
+    </div>
+
+    <!-- 承接段落 · 从收藏与持续关注展开 -->
+    <div class="story">
+        <p>
+            有些人习惯把喜欢的页面留在书签栏里，隔段时间就回来看看。<br>
+            也有人只是偶尔想起，顺着记忆的路径重新找到这里。<br>
+            无论你是哪一种，每一次访问都构成一段持续的关注——<br>
+            而 <a href="https://cnweb-cnlottery.com" class="accent-link">中彩网官网首页</a> 一直用同样的安静姿态，等候每一次回访。
+        </p>
+        <p>
+            我们无意用夸张的标语留住谁，也不需要用闪烁的按钮催促点击。<br>
+            因为真正值得反复回来的地方，从来不需要喧哗。<br>
+            收藏夹里的那个名字，或许就是你对一份信息源长久的信任。
+        </p>
+    </div>
+
+    <!-- 特点卡片 · 蓝绿网格 -->
+    <div class="feature-grid">
+        <div class="grid-card">
+            <div class="emoji-marker">📌</div>
+            <h3>收藏即约定</h3>
+            <p>将页面加入书签，如同在书页里夹一枚便签——你知道它在那里，随时翻开。</p>
+        </div>
+        <div class="grid-card">
+            <div class="emoji-marker">🔁</div>
+            <h3>回访的节奏</h3>
+            <p>不需要每天惦记，却会在某个时刻自然想起。真正的关注往往不刻意。</p>
+        </div>
+        <div class="grid-card">
+            <div class="emoji-marker">🧭</div>
+            <h3>不变的坐标</h3>
+            <p>网络地址如同一个安静的坐标，只要它还在，你就总能找到回来的路。</p>
+        </div>
+        <div class="grid-card">
+            <div class="emoji-marker">☕</div>
+            <h3>温存的陪伴</h3>
+            <p>没有强推送，没有弹窗干扰。页面就在这里，等你愿意的时候过来看看。</p>
+        </div>
+    </div>
+
+    <!-- 温和结尾 + 轻提示 -->
+    <div class="gentle-closing">
+        <p>
+            或许你早已收藏过这个页面，或许今天是第一次遇见。<br>
+            没关系，好的内容经得起反复回访，也经得起时间的沉淀。
+        </p>
+        <p>
+            保持关注的方式很多——书签、历史记录、或者仅仅只是记住一个名字。<br>
+            而 <a href="https://cnweb-cnlottery.com" class="inline-link">中彩网官网首页</a> 始终以一种稳定的节奏，陪伴那些愿意回望的人。
+        </p>
+        <div class="quiet-note">
+            📎 如果你愿意，现在就可以把它加入书签栏。
+        </div>
+    </div>
+
+    <!-- 轻量FAQ摘要 / 常见回访场景 -->
+    <div class="tips-duo">
+        <div class="tip-item">
+            <span>🔄 回访场景</span>
+            <small>偶尔想起时，从书签或历史记录里直接打开，无需重新搜索。</small>
+        </div>
+        <div class="tip-item">
+            <span>📋 收藏建议</span>
+            <small>桌面端按 Ctrl+D / Cmd+D，移动端可通过浏览器菜单添加书签。</small>
+        </div>
+        <div class="tip-item">
+            <span>📆 关注节奏</span>
+            <small>不必频繁，但每一次回来都会有熟悉的安心感。</small>
+        </div>
+        <div class="tip-item">
+            <span>🔐 无声信任</span>
+            <small>一个长期不变的页面，本身就是一份安静的承诺。</small>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="footer-meta">
+        <span>页面内容仅作信息呈现 · 非商业推广</span>
+    </div>
+</div>
+</body>
+</html>
